@@ -30,10 +30,12 @@ import Navigation from '../config/navigation'
 
 function Index(props) {
 
+    //basename={'2020/admin'}
+
     const authenticate = useSelector(state => state.user.authenticate)
 
     return (
-        <Router basename={'2020/admin'}>
+        <Router >
             {
                 authenticate ?
 
@@ -104,7 +106,7 @@ const Authen = (props) => {
 
                 }
             }
-        }else{
+        } else {
             history.replace(Navigation.PageLogin);
         }
 
