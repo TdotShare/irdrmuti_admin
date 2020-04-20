@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage" : "./" ,
-  "proxy": "http://127.0.0.1:8080/Production/Website/irdrmuti/public/api",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^18.0.0",
     "@ckeditor/ckeditor5-react": "^2.1.0",
