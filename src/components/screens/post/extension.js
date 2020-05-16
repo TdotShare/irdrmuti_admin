@@ -33,8 +33,8 @@ function Extension() {
     const history = useHistory();
     const user = useSelector(state => state.user.data)
 
-    const [urlPic] = React.useState('http://127.0.0.1:8080/Production/Website/irdrmuti/public') //ชื่อเรื่อง
-    //const [urlPic] = React.useState('http://ird.rmuti.ac.th/2020/word') //ชื่อเรื่อง
+    //const [urlPic] = React.useState('http://127.0.0.1:8080/Production/Website/irdrmuti/public') //ชื่อเรื่อง
+    const [urlPic] = React.useState('http://ird.rmuti.ac.th/2020/world') //ชื่อเรื่อง
 
     const params = createBrowserHistory();
     const item = params.location.state ? params.location.state.item : []

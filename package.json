@@ -2,7 +2,7 @@
   "name": "react_ds_irdrmuti",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "./" ,
+  "homepage": "./",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^18.0.0",
     "@ckeditor/ckeditor5-react": "^2.1.0",

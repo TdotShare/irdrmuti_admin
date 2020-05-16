@@ -37,7 +37,7 @@ function Index() {
     const [BackDrop, setBackDrop] = React.useState(false) // เปิด - ปิดตัวรอโหลด BackDrop
 
     const actionGetTopic = () => {
-
+        //console.log('start actionGetTopic !')
         const config = {
             headers: {
                 'accept': 'application/json',
@@ -48,6 +48,7 @@ function Index() {
 
         axios.get(`${API}/topic`, config)
             .then(res => {
+                //console.log(res.data)
                 if (res.data.bypass) {
                     
                     setTopic(res.data.data)

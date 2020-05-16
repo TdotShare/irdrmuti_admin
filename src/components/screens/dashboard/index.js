@@ -17,12 +17,12 @@ function Index() {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid xs={12}>
+            <Grid container spacing={1}>
+                <Grid xs={12} item>
                 <h4>ยินต้อนรับ {user.username} เข้าสู่ระบบ หลังบ้านของ</h4>
                 </Grid>
-                <Grid xs={12}>
-                <h5>IRDRMUTI - WORD</h5>
+                <Grid xs={12} item>
+                <h5>IRDRMUTI - WORLD</h5>
                 </Grid>
 
             </Grid>

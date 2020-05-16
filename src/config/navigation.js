@@ -28,6 +28,9 @@ const PageMenu_MenuSub = `/menusub`
 const PageMenu_MenuSub_Create = `/menusub/create`
 const PageMenu_MenuSub_Edit = `/menusub/edit`
 
+const PageEvent = `/event`
+
+
 export default {
     PageDashboard ,
     PagePost ,
@@ -40,6 +43,7 @@ export default {
     PageMenu_MenuSub,
     PageMenu_MenuSub_Create,
     PageMenu_MenuSub_Edit,
+    PageEvent,
     PageHome ,
     PageLogin
 }

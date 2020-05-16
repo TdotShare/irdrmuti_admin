@@ -23,6 +23,8 @@ import MenuSubSrceen from '../../src/components/screens/menusub'
 import MenuSubCreateSrceen from '../../src/components/screens/menusub/create'
 import MenuSubEditSrceen from '../../src/components/screens/menusub/edit'
 
+import EventSrceen from '../../src/components/screens/event/index'
+
 
 import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import { connect, useSelector, useDispatch } from 'react-redux'
@@ -35,7 +37,7 @@ function Index(props) {
     const authenticate = useSelector(state => state.user.authenticate)
 
     return (
-        <Router >
+        <Router basename={'2020/admin'} >
             {
                 authenticate ?
 
@@ -60,6 +62,8 @@ function Index(props) {
                                         <Route exact path={`${Navigation.PageMenu_MenuSub}/:id`} component={() => <MenuSubSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_MenuSub_Create}/:id`} component={() => <MenuSubCreateSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_MenuSub_Edit}/:id`} component={() => <MenuSubEditSrceen />} />
+
+                                        <Route exact path={`${Navigation.PageEvent}`} component={() => <EventSrceen />} />
                                     </Switch>
                                 }
                             />
