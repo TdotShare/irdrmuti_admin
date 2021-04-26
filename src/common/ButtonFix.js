@@ -17,7 +17,7 @@ function ButtonFix(props) {
                 {props.itemImage ?
 
                     < input
-                        accept="image/*"
+                        accept={props.accept ? props.accept: "image/*" }
                         onChange={props.onChange}
                         type="file"
                         style={{ display: "none" }}

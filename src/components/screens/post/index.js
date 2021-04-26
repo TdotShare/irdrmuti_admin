@@ -122,8 +122,8 @@ function Index() {
                             tooltip: 'Link',
                             onClick: (event, rowData) => {
                                 //console.log(`${Url}/content/${rowData.topic_id}`)
-                                navigator.clipboard.writeText(`${Url.host}/content/${rowData.topic_id}`)
-                                AlertFix.actionSuccess(`Copy Link ${rowData.topic_id} !`)
+                                //navigator.clipboard.writeText(`${Url.host}/content/${rowData.topic_id}`)
+                                alert(`${Url.host}/content/${rowData.topic_id}`)
                             }
                         },
                         {

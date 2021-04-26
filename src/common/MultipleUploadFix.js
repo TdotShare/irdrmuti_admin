@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 function UploadImages(props) {
 
     const classes = useStyles();
-    const URL = "http://ird.rmuti.ac.th/2020/admin/";
+    const host = "http://ird.rmuti.ac.th/2020/admin/";
 
     const title = props.mode == "images" ? "อัปโหลดรูปภาพเนื้อหา" : "อัปโหลดไฟล์แนบ" // eslint-disable-line
     const buttonTitle = props.mode == "images" ? "เลือกรูปภาพ" : "เลือกไฟล์" // eslint-disable-line
@@ -188,7 +188,7 @@ function UploadImages(props) {
                                                 {
                                                     props.preview.map((data, index) => (
                                                         <GridListTile key={index}>
-                                                            <img src={`${URL}/assets/mock/icon/docs.png`} alt={data.name} />
+                                                            <img src={`${host}/assets/mock/icon/docs.png`} alt={data.name} />
                                                             <GridListTileBar
                                                                 title={data.name}
                                                                 classes={{

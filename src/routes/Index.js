@@ -25,6 +25,9 @@ import MenuSubEditSrceen from '../../src/components/screens/menusub/edit'
 
 import EventSrceen from '../../src/components/screens/event/index'
 
+import NewsletterSrceen from '../../src/components/screens/newsletter/index'
+import NewsletterCreateSrceen from '../../src/components/screens/newsletter/create'
+
 
 import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import { connect, useSelector, useDispatch } from 'react-redux'
@@ -47,23 +50,21 @@ function Index(props) {
                             <TemplateMain
                                 body={
                                     <Switch>
+                                        <Route exact path={`/`} component={() => <DashboardSrceen />} />
                                         <Route exact path={`${Navigation.PageDashboard}`} component={() => <DashboardSrceen />} />
-
                                         <Route exact path={`${Navigation.PagePost}`} component={() => <PostSrceen />} />
                                         <Route exact path={`${Navigation.PagePost_Create}`} component={() => <PostCreateSrceen />} />
                                         <Route exact path={`${Navigation.PagePost_Edit}/:id`} component={() => <PostEditSrceen />} />
                                         <Route exact path={`${Navigation.PagePost_Extension}/:id`} component={() => <PostExtensionSrceen />} />
-
                                         <Route exact path={`${Navigation.PageMenu}`} component={() => <MenuSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_Create}`} component={() => <MenuCreateSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_Edit}/:id`} component={() => <MenuEditSrceen />} />
-
-
                                         <Route exact path={`${Navigation.PageMenu_MenuSub}/:id`} component={() => <MenuSubSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_MenuSub_Create}/:id`} component={() => <MenuSubCreateSrceen />} />
                                         <Route exact path={`${Navigation.PageMenu_MenuSub_Edit}/:id`} component={() => <MenuSubEditSrceen />} />
-
                                         <Route exact path={`${Navigation.PageEvent}`} component={() => <EventSrceen />} />
+                                        <Route exact path={`${Navigation.PageNewsletter}`} component={() => <NewsletterSrceen />} />
+                                        <Route exact path={`${Navigation.PageNewsletter_Create}`} component={() => <NewsletterCreateSrceen />} />
                                     </Switch>
                                 }
                             />

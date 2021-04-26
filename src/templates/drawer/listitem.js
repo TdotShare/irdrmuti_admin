@@ -4,6 +4,7 @@ import { ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/c
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import CategoryIcon from '@material-ui/icons/Category';
 import EventIcon from '@material-ui/icons/Event';
+import TimelineIcon from '@material-ui/icons/Timeline';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
@@ -46,11 +47,18 @@ function Listitem() {
                 <ListItemText primary={<Typography variant={'body2'}   > เมนู </Typography >} />
             </ListItem>
 
-            <ListItem button divider onClick={() => history.replace(Navigation.PageEvent)}>
+            <ListItem button onClick={() => history.replace(Navigation.PageEvent)}>
                 <ListItemIcon>
                     <EventIcon />
                 </ListItemIcon>
                 <ListItemText primary={<Typography variant={'body2'}   > วันพิเศษ </Typography >} />
+            </ListItem>
+
+            <ListItem button divider onClick={() => history.replace(Navigation.PageNewsletter)}>
+                <ListItemIcon>
+                    <TimelineIcon />
+                </ListItemIcon>
+                <ListItemText primary={<Typography variant={'body2'}   > จดหมายข่าวประจำเดือน </Typography >} />
             </ListItem>
 
 

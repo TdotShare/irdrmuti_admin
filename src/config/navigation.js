@@ -31,6 +31,10 @@ const PageMenu_MenuSub_Edit = `/menusub/edit`
 const PageEvent = `/event`
 
 
+const PageNewsletter = `/newsletter`
+const PageNewsletter_Create = `/newsletter/create`
+
+
 export default {
     PageDashboard ,
     PagePost ,
@@ -44,6 +48,8 @@ export default {
     PageMenu_MenuSub_Create,
     PageMenu_MenuSub_Edit,
     PageEvent,
+    PageNewsletter,
+    PageNewsletter_Create,
     PageHome ,
     PageLogin
 }

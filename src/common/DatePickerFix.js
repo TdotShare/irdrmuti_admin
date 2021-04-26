@@ -19,18 +19,45 @@ export default function MaterialUIPickers(props) {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container >
-        <KeyboardDatePicker
-          margin="normal"
-          id="date-picker-dialog"
-          label={props.label}
-          format="MM/dd/yyyy"
-          value={props.now ? props.now : selectedDate}
-          onChange={handleDateChange}
-          inputVariant="outlined"
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-        />
+        {
+          props.mode ?
+
+            <KeyboardDatePicker
+              views={props.views}
+              margin="normal"
+              id="date-picker-dialog"
+              label={props.label}
+              value={props.now ? props.now : selectedDate}
+              onChange={handleDateChange}
+              inputVariant="outlined"
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+
+
+
+            :
+
+            <KeyboardDatePicker
+              margin="normal"
+              id="date-picker-dialog"
+              label={props.label}
+              format={props.format ? props.format : "MM/dd/yyyy"}
+              value={props.now ? props.now : selectedDate}
+              onChange={handleDateChange}
+              inputVariant="outlined"
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+
+
+
+
+
+        }
+
 
       </Grid>
     </MuiPickersUtilsProvider>
